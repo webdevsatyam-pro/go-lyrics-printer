@@ -15,7 +15,7 @@ func typeWrite(text string, delay time.Duration) {
 }
 
 func main() {
-	// ANSI Color Codes (Terminal ko rangeen banane ke liye)
+
 	colorReset := "\033[0m"
 	colorRed := "\033[31m"
 	colorYellow := "\033[33m"
@@ -46,7 +46,6 @@ func main() {
 		{"Rain saari teri khair manaun... 🌙", colorRed},
 	}
 
-	// Loop jo lyrics ko stylist tarike se print karega
 	for _, line := range lyrics {
 		if line.text == "" {
 			fmt.Println() // Empty line ke liye
@@ -54,7 +53,6 @@ func main() {
 			continue
 		}
 
-		// Line print ho rahi hai thode style ke saath
 		fmt.Print(line.color)
 		typeWrite(line.text, 50*time.Millisecond) // Har akshar 50ms mein aayega
 
